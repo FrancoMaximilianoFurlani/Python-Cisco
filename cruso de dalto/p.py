@@ -8,11 +8,10 @@ class B:
         print("b")
 
 
-class C(A, B):
+class C(B, A):
     def c(self):
         self.a()
 
 
 o = C()
-
 o.c()
