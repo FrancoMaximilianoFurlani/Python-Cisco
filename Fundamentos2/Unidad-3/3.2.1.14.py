@@ -4,6 +4,7 @@ class Stack:
 
     def push(self, val):
         self.__stk.append(val)
+        return val
 
     def pop(self):
         val = self.__stk[-1]
@@ -27,6 +28,7 @@ class CountingStack(Stack):
 
 stk = CountingStack()
 for i in range(100):
-    stk.push(i)
-    stk.pop()
+    print(stk.push(i))
+    print(stk.pop())
+    # print(stk.get_counter())
 print(stk.get_counter())
